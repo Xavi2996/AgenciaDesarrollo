@@ -1,0 +1,127 @@
+/* Variables */
+:root {
+  --color-text-body: #525260;
+  --color-primary: #5956e9;
+  --color-secondary: #fff;
+}
+
+/* Estilos generales */
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  font-size: 1.6rem;
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color-text-body);
+}
+
+/* Estructura */
+.layout {
+  width: 100%;
+  min-width: 1200px;
+  min-height: 100%;
+}
+
+/* Estilos Menu navegacion */
+.layout__menu {
+  width: 100%;
+  padding: 3.5rem 3rem;
+}
+
+.menu__navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__logo {
+  width: 187px;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.nav__item {
+  position: relative;
+  margin: 0 2.4rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.nav__title {
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+  color: var(--color-text-body);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav__icon {
+  font-size: 1rem;
+  font-weight: bold;
+  padding-left: 0.2rem;
+  vertical-align: middle;
+}
+
+.nav__title:hover {
+  color: var(--color-primary);
+}
+
+.nav__title::before {
+  content: "";
+  height: 0.2rem;
+  width: 0;
+  background-color: var(--color-primary);
+  position: absolute;
+  bottom: -0.7rem;
+  left: 0;
+  opacity: 0;
+  transition: 500ms;
+}
+
+.nav__title:hover::before {
+  width: 100%;
+  opacity: 1;
+}
+
+.nav__submenu {
+  display: block;
+  position: absolute;
+  top: 4.3rem;
+  min-width: 19rem;
+  padding: 1.5rem 1rem;
+  border-radius: 4px;
+  left: 2rem;
+  background-color: var(--color-secondary);
+  box-shadow: 0px 13px 48px 0 rgba(0, 0, 0, 0.15);
+
+  opacity: 1;
+}
+
+.submenu__item {
+  opacity: 1;
+  transform: translatex(20px);
+  transition: all 100ms ease-in-out;
+}
+
+.submenu__title {
+  position: relative;
+  display: block;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--color-text-body);
+  padding: 0.7rem 1.5rem;
+  transition: all 300ms ease-in-out;
+}
