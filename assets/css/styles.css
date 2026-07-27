@@ -1,5 +1,6 @@
 /* Variables */
 :root {
+  --mx-width: 1320px;
   --color-text-body: #525260;
   --color-primary: #5956e9;
   --color-secondary: #fff;
@@ -9,6 +10,10 @@
   --color-subtitle: #c75c6f;
   --color-title: #292930;
   --color-bg-services: #f8f8f8;
+  --color-bg-projects: #ecf2f6;
+  --color-bg-dark: #27272e;
+  --color-text-description: #99a1aa;
+  --color-hover-dark: #303035;
 }
 
 /* Estilos generales */
@@ -378,12 +383,13 @@ body {
 /* Servicios */
 .layout__services {
   position: relative;
-  margin: 5rem 4rem;
+  margin: 14rem 10rem;
+  margin-bottom: 8rem;
   z-index: 1;
 }
 
 .services__grid {
-  max-width: 1320px;
+  max-width: var(--mx-width);
   margin: 0 auto;
 }
 
@@ -392,13 +398,17 @@ body {
   text-align: left;
 }
 
-.services__subtitle {
+.services__subtitle,
+.projects__subtitle,
+.stats__subtitle {
   font-size: 2rem;
   font-weight: 500;
   color: var(--color-subtitle);
 }
 
-.services__title {
+.services__title,
+.project__title,
+.stats__title {
   font-size: 6.7rem;
   font-weight: 500;
   line-height: 1.2;
@@ -500,4 +510,213 @@ body {
 }
 .services__service--bottom {
   margin-top: 20rem;
+}
+
+/* Formas detras de lo servicios */
+
+.service-shapes__item {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.service-shapes--shape1 {
+  top: -7%;
+  right: 7%;
+}
+.service-shapes--shape2 {
+  top: 10%;
+  right: 52%;
+}
+.service-shapes--shape3 {
+  top: 34%;
+  left: 5%;
+}
+
+/* PORTAFOLIO */
+
+.layout__projects {
+  position: relative;
+  background-color: var(--color-bg-projects);
+  padding: 14rem 10rem;
+  z-index: 1;
+}
+
+.projects__grid {
+  max-width: var(--mx-width);
+  margin: 0 auto;
+}
+
+.projects__header {
+  margin-bottom: 4rem;
+}
+
+.projects__subtitle {
+  text-transform: capitalize;
+}
+
+.projects__categories {
+  display: flex;
+  flex-direction: row;
+  gap: 7rem;
+  margin-bottom: 5.5rem;
+}
+
+.categories__item {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--color-text-body);
+  cursor: pointer;
+  padding: 0.8rem 0;
+  transition: all 0.15s ease-in-out;
+}
+
+.categories__item--active,
+.categories__item:hover {
+  border-bottom: 3px solid var(--color-primary);
+}
+
+.projects__all {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4rem 7rem;
+}
+
+.project__container-img {
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+  overflow: hidden;
+}
+
+.project__img {
+  width: 100%;
+  transition: all 800ms ease-in-out;
+}
+
+.projects__project:hover .project__img {
+  transform: scale(1.2);
+}
+
+.project__content {
+  padding: 4rem 5rem;
+  background-color: var(--color-secondary);
+  border-radius: 0 0 30px 30px;
+}
+
+.project__title {
+  font-size: 3.2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-title);
+  transition: all 0.3s ease-in-out;
+}
+
+.project__title:hover {
+  color: var(--color-banner);
+}
+
+.project__tags {
+  font-size: 1.7rem;
+}
+
+.project-shape__item {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.project-shapes--shape1 {
+  top: 4%;
+  right: 11%;
+}
+
+.project-shapes--shape2 {
+  top: 8%;
+  right: 35%;
+}
+
+.project-shapes--shape3 {
+  top: 38%;
+  left: 5%;
+}
+
+/* Seccion estadicsticas */
+
+.layout__stats {
+  background-color: var(--color-bg-dark);
+  padding: 14rem 11rem;
+}
+
+.stats__container {
+  max-width: var(--mx-width);
+  margin: 0 auto;
+}
+
+.stats__header {
+  text-align: center;
+}
+
+.stats__title {
+  color: var(--color-secondary);
+  font-size: 6.4rem;
+  margin-bottom: 3rem;
+}
+
+.stats__description {
+  color: var(--color-text-description);
+  width: 60%;
+  font-size: 2rem;
+  margin: 0 auto 4rem;
+}
+
+.stats__progress {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.stats__stat {
+  width: 25%;
+  text-align: center;
+  padding: 7rem 2rem;
+  border-radius: 2rem;
+}
+
+.stats__stat:hover {
+  background: linear-gradient(
+    180deg,
+    var(--color-bg-dark),
+    var(--color-hover-dark)
+  );
+  border: 1px solid var(--color-hover-dark);
+}
+
+.stat__icon {
+  /* margin-bottom: 2rem; */
+}
+
+.stat__icon > img {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.stat__count {
+  display: inline-block;
+  font-size: 6.4rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.stat__title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-secondary);
 }
