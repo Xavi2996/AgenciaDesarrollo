@@ -400,7 +400,8 @@ body {
 
 .services__subtitle,
 .projects__subtitle,
-.stats__subtitle {
+.stats__subtitle,
+.reviews__subtitle {
   font-size: 2rem;
   font-weight: 500;
   color: var(--color-subtitle);
@@ -408,7 +409,8 @@ body {
 
 .services__title,
 .project__title,
-.stats__title {
+.stats__title,
+.reviews__title {
   font-size: 6.7rem;
   font-weight: 500;
   line-height: 1.2;
@@ -719,4 +721,23 @@ body {
   font-weight: 400;
   line-height: 1.2;
   color: var(--color-secondary);
+}
+
+/* Reseñas */
+
+.layout__reviews {
+  position: relative;
+  padding-top: 14rem;
+  padding-bottom: 11rem;
+  z-index: 1;
+}
+
+.reviews__grid {
+  max-width: var(--mx-width);
+  margin: 0 auto;
+}
+
+.reviews__header {
+  text-align: left;
+  margin-bottom: 6rem;
 }
