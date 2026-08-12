@@ -7,6 +7,11 @@
     <!-- Cargar Estilos -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+    <!-- Cargar JS -->
+    <script src="assets/js/menu-mobile.js" defer></script>
+    <script src="assets/js/navbar-fixed.js" defer></script>
 
     <!-- Cargar Fuentes -->
     <link
@@ -18,6 +23,129 @@
     <title>Agencia de Desarrollo | Xavier Cobos</title>
   </head>
   <body>
+    <!-- boton modo oscuro -->
+    <div class="switcher">
+      <div class="switcher__btn">
+        <span class="switcher__icon-ligth">
+          <i class="fa-solid fa-moon switcher__icon"></i>
+        </span>
+        <span class="switcher__icon-dark">
+          <i class="fa-solid fa-lightbulb switcher__icon"></i>
+        </span>
+      </div>
+    </div>
+
+    <!-- menu navegacion responsive -->
+    <div class="menu-mobile">
+      <header class="menu-mobile__header">
+        <div class="menu-mobile__container-logo">
+          <a href="#" class="menu-mobile__logo">
+            <img
+              src="assets/img/logo1.png"
+              class="menu-mobile__link-logo"
+              alt="Logo"
+          /></a>
+        </div>
+
+        <button class="menu-mobile__close">
+          <i class="menu-mobile__icon fa-solid fa-xmark"></i>
+        </button>
+      </header>
+
+      <div class="menu-mobile__body">
+        <nav class="menu-mobile__nav">
+          <ul class="menu-mobile__list">
+            <li class="menu-mobile__item">
+              <a href="#" class="menu-mobile__link">Inicio</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="#" class="menu-mobile__link"
+                >Servicios
+                <i class="fa-solid fa-chevron-down menu-mobile__icon"></i>
+              </a>
+              <ul class="menu-mobile__submenu-mobile">
+                <li class="submenu-mobile__item">
+                  <a href="#" class="submenu-mobile__link">Diseño Web</a>
+                </li>
+                <li class="submenu-mobile__item">
+                  <a href="#" class="submenu-mobile__link">Desarrollo Web</a>
+                </li>
+                <li class="submenu-mobile__item">
+                  <a href="#" class="submenu-mobile__link"
+                    >Desarrollo de Apps</a
+                  >
+                </li>
+                <li class="submenu-mobile__item">
+                  <a href="#" class="submenu-mobile__link">Programación</a>
+                </li>
+                <li class="submenu-mobile__item">
+                  <a href="#" class="submenu-mobile__link">Consultoría</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu-mobile__item">
+              <a href="#" class="menu-mobile__link"
+                >Portafolio
+                <i class="fa-solid fa-chevron-down menu-mobile__icon"></i>
+              </a>
+              <ul class="menu-mobile__submenu-mobile">
+                <li class="submenu-mobile__item">
+                  <a href="#" class="submenu-mobile__link">Diseño Web</a>
+                </li>
+                <li class="submenu-mobile__item">
+                  <a href="#" class="submenu-mobile__link">Desarrollo Web</a>
+                </li>
+                <li class="submenu-mobile__item">
+                  <a href="#" class="submenu-mobile__link"
+                    >Desarrollo de Apps</a
+                  >
+                </li>
+                <li class="submenu-mobile__item">
+                  <a href="#" class="submenu-mobile__link">Programación</a>
+                </li>
+                <li class="submenu-mobile__item">
+                  <a href="#" class="submenu-mobile__link">Consultoría</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="#" class="menu-mobile__link"
+                >Blog
+                <i class="fa-solid fa-chevron-down menu-mobile__icon"></i>
+              </a>
+              <ul class="menu-mobile__submenu-mobile">
+                <li class="submenu-mobile__item">
+                  <a href="#" class="submenu-mobile__link">Diseño Web</a>
+                </li>
+                <li class="submenu-mobile__item">
+                  <a href="#" class="submenu-mobile__link">Desarrollo Web</a>
+                </li>
+                <li class="submenu-mobile__item">
+                  <a href="#" class="submenu-mobile__link"
+                    >Desarrollo de Apps</a
+                  >
+                </li>
+                <li class="submenu-mobile__item">
+                  <a href="#" class="submenu-mobile__link">Programación</a>
+                </li>
+                <li class="submenu-mobile__item">
+                  <a href="#" class="submenu-mobile__link">Consultoría</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="#" class="menu-mobile__link">Equipo</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="#" class="menu-mobile__link">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- estructura principal de la web -->
     <div class="layout">
       <!-- MENU -->
       <section class="layout__menu">
@@ -30,6 +158,14 @@
                 alt="Logo Light"
               />
             </a>
+          </div>
+          <!-- boton de menu responsive -->
+          <div class="navbar__mobile-btn">
+            <button class="mobile-btn__wrap">
+              <span class="mobile-btn__line"></span>
+              <span class="mobile-btn__line"></span>
+              <span class="mobile-btn__line"></span>
+            </button>
           </div>
           <nav class="navbar__nav">
             <ul class="nav__list">
@@ -734,7 +870,7 @@
             <article class="news__new">
               <div class="new__container-img">
                 <img
-                  src="./assets/img/story-.jpg"
+                  src="./assets/img/story-2.jpg"
                   alt="Noticia 2 "
                   class="new__img"
                 />
@@ -807,7 +943,7 @@
           </header>
 
           <div class="contact__images">
-            <div class="contact__thumb">
+            <div class="contact__thumb contact__thumb--chat">
               <img
                 src="./assets/img/chat-group.png"
                 alt="Contacto"
@@ -890,52 +1026,52 @@
       <footer class="layout__footer">
         <div class="footer__container">
           <section class="footer__top">
-            <ul class="footer__socia">
+            <ul class="footer__social">
               <li class="social__item">
                 <a href="#" class="social__link">
-                  <i class="fa-solid fa-twitter social__img"></i>
+                  <i class="fa-brands fa-twitter social__img"></i>
                 </a>
               </li>
               <li class="social__item">
                 <a href="#" class="social__link">
-                  <i class="fa-solid fa-youtube social__img"></i>
+                  <i class="fa-brands fa-youtube social__img"></i>
                 </a>
               </li>
               <li class="social__item">
                 <a href="#" class="social__link">
-                  <i class="fa-solid fa-instagram social__img"></i>
+                  <i class="fa-brands fa-instagram social__img"></i>
                 </a>
               </li>
               <li class="social__item">
                 <a href="#" class="social__link">
-                  <i class="fa-solid fa-linkedin social__img"></i>
+                  <i class="fa-brands fa-linkedin social__img"></i>
                 </a>
               </li>
               <li class="social__item">
                 <a href="#" class="social__link">
-                  <i class="fa-solid fa-pinterest social__img"></i>
+                  <i class="fa-brands fa-pinterest social__img"></i>
                 </a>
               </li>
               <li class="social__item">
                 <a href="#" class="social__link">
-                  <i class="fa-solid fa-tiktok social__img"></i>
+                  <i class="fa-brands fa-tiktok social__img"></i>
                 </a>
               </li>
               <li class="social__item">
                 <a href="#" class="social__link">
-                  <i class="fa-solid fa-reddit social__img"></i>
+                  <i class="fa-brands fa-reddit social__img"></i>
                 </a>
               </li>
               <li class="social__item">
                 <a href="#" class="social__link">
-                  <i class="fa-solid fa-snapchat social__img"></i>
+                  <i class="fa-brands fa-snapchat social__img"></i>
                 </a>
               </li>
             </ul>
           </section>
 
           <section class="footer__main">
-            <div class="footer__left">
+            <div class="footer__fleft">
               <div class="fleft__container">
                 <h2 class="fleft__title">Contáctanos</h2>
                 <p class="fleft__subtitle">
@@ -959,7 +1095,7 @@
               </div>
             </div>
             <div class="footer__fright">
-              <div class="footer__widget">
+              <div class="footer__widget footer__widget--50">
                 <h6 class="widget__title">Servicios</h6>
 
                 <ul class="widget__list">
@@ -984,7 +1120,7 @@
                 </ul>
               </div>
 
-              <div class="footer__widget">
+              <div class="footer__widget footer__widget--25">
                 <h6 class="widget__title">Recursos</h6>
                 <ul class="widget__list">
                   <li class="widget__item">
@@ -999,7 +1135,7 @@
                 </ul>
               </div>
 
-              <div class="footer__widget">
+              <div class="footer__widget footer__widget--25">
                 <h6 class="widget__title">Soporte</h6>
 
                 <ul class="widget__list">
@@ -1018,14 +1154,14 @@
           </section>
 
           <section class="footer__bottom">
-            <div class="footer__copyrigth">
-              <span class="copyriht__text">
-                &copy; 2024 <a href="#" class="copyriht__link">Xavier Cobos</a>
+            <div class="footer__copyright">
+              <span class="copyright__text">
+                &copy; 2024 <a href="#" class="copyright__link">Xavier Cobos</a>
                 Todos los derechos reservados.
               </span>
             </div>
 
-            <div class="footer__link">
+            <div class="footer__links">
               <ul class="footer__flinks">
                 <li class="flinks__item flinks__item--separator">
                   <a href="#" class="flinks__title">Política de privacidad</a>
