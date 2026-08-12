@@ -1387,7 +1387,7 @@ body {
   display: flex;
 }
 
-.switcher__icon-ligth,
+.switcher__icon-light,
 .switcher__icon-dark {
   color: var(--color-secondary);
   font-size: 1.8rem;
